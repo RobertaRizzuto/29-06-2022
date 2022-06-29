@@ -7,8 +7,6 @@ const removeSerieBtnEl = q(".remove-serie");
 const deleteInputEl = q(".delete");
 
 
-
-// ------------ il nuovo GET tramite funzione async/await, il vecchio sta sopra commentato a riga 17
 GET(BASE_URL).then((data) => {
   data.map((serie) => {
     const imgOrPlaceholder = serie.poster || "https://picsum.photos/200/300";
@@ -24,7 +22,7 @@ GET(BASE_URL).then((data) => {
   });
 });
 
-// ------------ il nuovo POST tramite funzione async/await, il vecchio sta sopra commentato a riga 33
+
 
 addSerieBtnEl.addEventListener("click", () => {
   const titleInputEl = q(".title").value;
@@ -40,7 +38,7 @@ addSerieBtnEl.addEventListener("click", () => {
   POST(BASE_URL, body).then(() => location.reload());
 });
 
-// ------------ il nuovo DELETE tramite funzione async/await, il vecchio sta sopra commentato a riga 43
+
 deleteInputEl.addEventListener("input", (eventInput) => {
   removeSerieBtnEl.addEventListener("click", (eventClick) => {
     DELETE(BASE_URL, eventInput.target.value).then(() => location.reload());
