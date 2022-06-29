@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+img {
+  width: 100px;
+}
+
+.wrapper {
+  padding: 10px;
+  border: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  cursor: pointer;
+}
+
+.wrapper:hover{
+  background-color: lightcoral;
+}
+
+.wrapper:active{
+  background-color: lightcoral;
+  box-shadow: inset 0 0 12px black;
+}
+.input_form {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.forminput {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 5px;
+}
